@@ -1,1 +1,1 @@
-# AMC_Calculator
+# amc_calculator
