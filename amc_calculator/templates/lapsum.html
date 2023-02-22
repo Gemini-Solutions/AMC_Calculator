@@ -20,7 +20,7 @@
       <!--button href="/calculator/sip" class="btn"><i class="fa fa-lock"></i> SIP</button>
       <button href="/calculator/lapsum" class="btn"><i class="fa fa-lock"></i> LAPSUM</button-->
       <fieldset class="radio_btn"><input type="radio" name="SIP" class= "btn" onclick="window.location='/calculator/sip';"><i class="fa fa-lock"></i>SIP</input></fieldset>
-      <fieldset class="radio_btn"><input type="radio" name="lapsum" class= "btn" onclick="window.location='/calculator/lapsum';" checked><i class="fa fa-lock"></i>LUMPSUM</input></fieldset>
+      <fieldset class="radio_btn"><input type="radio" name="lapsum" class= "btn" onclick="window.location='/calculator/lumpsum';" checked><i class="fa fa-lock"></i>LUMPSUM</input></fieldset>
 	</ul>
   </div>  
   
@@ -37,12 +37,12 @@
         <div style="text-align:right;color:red" class="error" id="expreturnErr"></div>
       </p>
       <p>
-        <label for="Current Age" class="inputlable">Current Age:</label>
+        <label for="Current Age" class="inputlable">Current Age(Years):</label>
         <input type="number" name="Current Age" id="Current_Age" value="25" class="inputbox"/>
         <div style="text-align:right;color:red" class="error" id="ageErr"></div>
       </p>
       <p>
-        <label for="Expected Retirement Age" class="inputlable">Expected Retirement Age:</label>
+        <label for="Expected Retirement Age" class="inputlable">Expected Retirement Age(Years):</label>
         <input type="number" name="Expected Retirement Age" id="Expected_Retirement_Age" value="58" class="inputbox"/>
         <div style="text-align:right;color:red" class="error" id="retirementageErr"></div>
       </p>
