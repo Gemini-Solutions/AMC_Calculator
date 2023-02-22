@@ -17,7 +17,7 @@
     <h1 style="text-align:center;">AMC CALCULATOR</h1>
 	<ul>
       <fieldset class="radio_btn"><input type="radio" name="SIP" class= "btn" onclick="window.location='/calculator/sip';" checked><i class="fa fa-lock"></i>SIP</input></fieldset>
-      <fieldset class="radio_btn"><input type="radio" name="lapsum" class= "btn" onclick="window.location='/calculator/lapsum';"><i class="fa fa-lock"></i>LUMPSUM</input></fieldset>
+      <fieldset class="radio_btn"><input type="radio" name="lapsum" class= "btn" onclick="window.location='/calculator/lumpsum';"><i class="fa fa-lock"></i>LUMPSUM</input></fieldset>
 	</ul>
   </div>  
   <form id="processForm">
@@ -38,12 +38,12 @@
         <div style="text-align:right;color:red" class="error" id="ageErr"></div>
       </p>
       <p>
-        <label for="Estimated Preiod of Investment" class="inputlable">Estimated Preiod of Investment(Years):</label>
+        <label for="Estimated Preiod of Investment" class="inputlable">Estimated Period of Investment(Years):</label>
         <input type="number" name="Estimated Preiod of Investment" id="Estimated_Preiod_of_Investment" value = "5" class="inputbox"/>
         <div style="text-align:right;color:red" class="error" id="EstimatedPreiodInvestmentErr"></div>
       </p>
       <p>
-        <label for="Expected Retirement Age" class="inputlable">Expected Retirement Age(years):</label>
+        <label for="Expected Retirement Age" class="inputlable">Expected Retirement Age(Years):</label>
         <input type="number" name="Expected Retirement Age" id="Expected_Retirement_Age" value="58" class="inputbox"/>
         <div style="text-align:right;color:red" class="error" id="retirementageErr"></div>
       </p>
@@ -107,7 +107,7 @@
           printError("EstimatedPreiodInvestmentErr", "");
         }
         var retirement_age = parseFloat($('#Expected_Retirement_Age').val());
-        if (retirement_age <= age || retirement_age <= 0) 
+        if (retirement_age < (estimated_time + age) || retirement_age <= 0) 
         {
           printError("retirementageErr", "Retirement age greater than current age");
         }
